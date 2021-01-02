@@ -1,11 +1,15 @@
 Package: p0bservations
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Assorted functions and observations by p0bs
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Authors@R: 
+  person(
+    given = "Robin", 
+    family = "Penfold", 
+    email = "robinpenfold@icloud.com", 
+    role = c("aut", "cre")
+    ) 
+Description: Provides assorted functions by p0bs.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

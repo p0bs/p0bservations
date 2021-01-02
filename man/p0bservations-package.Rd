@@ -4,9 +4,12 @@
 \name{p0bservations-package}
 \alias{p0bservations}
 \alias{p0bservations-package}
-\title{p0bservations: What the Package Does (Title Case)}
+\title{p0bservations: Assorted functions and observations by p0bs}
 \description{
-More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Provides assorted functions by p0bs.
+}
+\author{
+\strong{Maintainer}: Robin Penfold \email{robinpenfold@icloud.com}
+
 }
 \keyword{internal}
