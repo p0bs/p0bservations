@@ -12,6 +12,7 @@ Provides assorted functions by p0bs.
 Useful links:
 \itemize{
   \item \url{https://github.com/p0bs/p0bservations}
+  \item \url{https://festive-mcclintock-0b679a.netlify.app}
 }
 
 }

@@ -10,7 +10,7 @@ Authors@R:
     role = c("aut", "cre")
     ) 
 Description: Provides assorted functions by p0bs.
-URL: https://github.com/p0bs/p0bservations
+URL: https://github.com/p0bs/p0bservations, https://festive-mcclintock-0b679a.netlify.app
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
