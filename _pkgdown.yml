@@ -1,0 +1,9 @@
+home:
+  title: An R package of various functions build by p0bs
+  url: https://github.com/p0bs/p0bservations
+reference:
+- title: "Getting data"
+  desc: >
+    Functions for retrieving data in some way
+- contents: 
+  - get_price_Zoopla

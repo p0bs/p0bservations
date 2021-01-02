@@ -8,6 +8,13 @@
 \description{
 Provides assorted functions by p0bs.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/p0bs/p0bservations}
+}
+
+}
 \author{
 \strong{Maintainer}: Robin Penfold \email{robinpenfold@icloud.com}
 
