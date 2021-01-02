@@ -20,3 +20,5 @@ Imports:
     rvest,
     stringr,
     xml2
+Suggests: 
+    covr
