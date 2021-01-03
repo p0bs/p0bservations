@@ -12,8 +12,6 @@
 
 get_price_Zoopla <- function(link_house){
   
-  # Add error checks, assuming that there are no houses under GBP 1k
-  
   if (!is.character(link_house)){ 
     rlang::abort("link_house must be a character input") 
   } 
@@ -26,8 +24,6 @@ get_price_Zoopla <- function(link_house){
     rlang::abort("link_house must begin with 'https://www.zoopla.co.uk/property/'")
   }
   
-  # Z <- tibble::tibble(links = c(link_house, link_house1)) %>% dplyr::rowwise() %>% dplyr::mutate(price = get_price_Zoopla(link_house = links))
-
   detail <- xml2::read_html(link_house) %>% 
     rvest::html_nodes(".pdp-estimate__price") %>%
     rvest::html_text() %>% 
