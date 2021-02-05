@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Changelog • p0bservations</title>
+<title>Calculate income net of UK tax and National Insurance — calc_income_net • p0bservations</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,8 @@
 
 
 
-<meta property="og:title" content="Changelog" />
+<meta property="og:title" content="Calculate income net of UK tax and National Insurance — calc_income_net" />
+<meta property="og:description" content="This function applies the prevailing tax bands and rates to give a simple calculation for income after UK tax and National Insurance." />
 
 
 
@@ -58,7 +59,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-news">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -110,34 +111,38 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-      <h1 data-toc-skip>Changelog <small></small></h1>
-      <small>Source: <a href='https://github.com/p0bs/p0bservations/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
+    <h1>Calculate income net of UK tax and National Insurance</h1>
+    <small class="dont-index">Source: <a href='https://github.com/p0bs/p0bservations/blob/master/R/calc_income_net.R'><code>R/calc_income_net.R</code></a></small>
+    <div class="hidden name"><code>calc_income_net.Rd</code></div>
     </div>
 
-    <div id="p0bservations-011" class="section level1">
-<h1 class="page-header" data-toc-text="0.1.1">
-<a href="#p0bservations-011" class="anchor"></a>p0bservations 0.1.1</h1>
-<ul>
-<li>Added `calc_income_net` to perform a simple tax &amp; NI calculation for a UK resident.</li>
-</ul>
-</div>
-    <div id="p0bservations-010" class="section level1">
-<h1 class="page-header" data-toc-text="0.1.0">
-<a href="#p0bservations-010" class="anchor"></a>p0bservations 0.1.0</h1>
-<ul>
-<li>Added a <code>NEWS.md</code> file to track changes to the package.</li>
-<li>Added <code>get_price_Zoopla</code> to retrieve house price estimates for British properties.</li>
-<li>Adding links to github and pkgdown sites</li>
-</ul>
-</div>
-  </div>
+    <div class="ref-description">
+    <p>This function applies the prevailing tax bands and rates to give a simple calculation for income after UK tax and National Insurance.</p>
+    </div>
 
+    <pre class="usage"><span class='fu'>calc_income_net</span><span class='op'>(</span><span class='va'>income_taxable</span><span class='op'>)</span></pre>
+
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>income_taxable</th>
+      <td><p>The taxable income level (i.e. after deductions for things like pension contributions).</p></td>
+    </tr>
+    </table>
+
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='fu'>calc_income_net</span><span class='op'>(</span>income_taxable <span class='op'>=</span> <span class='fl'>38000</span><span class='op'>)</span>
+<span class='op'>}</span>
+</div></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
     </nav>
   </div>
-
 </div>
 
 
