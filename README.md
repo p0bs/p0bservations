@@ -9,3 +9,4 @@
 Assorted functions and observations from p0bs, including:
 
 -   Pulling house price estimates from Zoopla
+-   Performing a simple tax & National Insurance calculation for a UK resident
