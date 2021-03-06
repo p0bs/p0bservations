@@ -4,7 +4,7 @@
 \name{p0bservations-package}
 \alias{p0bservations}
 \alias{p0bservations-package}
-\title{p0bservations: Assorted functions and observations by p0bs}
+\title{p0bservations: Assorted Functions and Observations by P0bs}
 \description{
 Provides assorted functions by p0bs.
 }

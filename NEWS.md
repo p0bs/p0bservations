@@ -1,3 +1,7 @@
+# p0bservations 0.1.2
+
+-   Simplify `get_price_Zoopla` to reflect new Zoopla page layout. Remove Notes from CRAN check
+
 # p0bservations 0.1.1
 
 -   Added \`calc_income_net\` to perform a simple tax & NI calculation for a UK resident.
