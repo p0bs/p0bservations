@@ -14,8 +14,12 @@ This function scrapes a Zoopla page and returns the associated estimated price o
 }
 \examples{
 \dontrun{
-get_price_Zoopla(link_house = 'https://www.zoopla.co.uk/property/1-oak-road/reigate/rh2-0bp/19534314')
-get_price_Zoopla(link_house = 'https://www.zoopla.co.uk/property/10-waverleigh-road/cranleigh/gu6-8bz/9852441')
+get_price_Zoopla(
+  link_house = 'https://www.zoopla.co.uk/property/1-oak-road/reigate/rh2-0bp/19534314'
+  )
+get_price_Zoopla(
+  link_house = 'https://www.zoopla.co.uk/property/10-waverleigh-road/cranleigh/gu6-8bz/9852441'
+  )
 }
 }
 \keyword{Zoopla}

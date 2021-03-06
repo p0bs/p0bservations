@@ -6,8 +6,12 @@
 #' @export
 #' @examples
 #' \dontrun{
-#' get_price_Zoopla(link_house = 'https://www.zoopla.co.uk/property/1-oak-road/reigate/rh2-0bp/19534314')
-#' get_price_Zoopla(link_house = 'https://www.zoopla.co.uk/property/10-waverleigh-road/cranleigh/gu6-8bz/9852441')
+#' get_price_Zoopla(
+#'   link_house = 'https://www.zoopla.co.uk/property/1-oak-road/reigate/rh2-0bp/19534314'
+#'   )
+#' get_price_Zoopla(
+#'   link_house = 'https://www.zoopla.co.uk/property/10-waverleigh-road/cranleigh/gu6-8bz/9852441'
+#'   )
 #' }
 
 get_price_Zoopla <- function(link_house){
@@ -24,30 +28,18 @@ get_price_Zoopla <- function(link_house){
     rlang::abort("link_house must begin with 'https://www.zoopla.co.uk/property/'")
   }
   
-  detail <- xml2::read_html(link_house) %>% 
-    rvest::html_nodes(".pdp-estimate__price") %>%
-    rvest::html_text() %>% 
-    stringr::str_split(., "\u00A3") %>% 
-    .[[1]] %>% 
-    .[2]
+  string <- xml2::read_html(link_house) %>% 
+    rvest::html_nodes("p.css-1tz04i5-Text-StyledEstimatedPriceText.eb1eagn1") %>%
+    rvest::html_text() 
   
-  detail_first <- stringr::str_sub(
-    string = detail, 
-    start = 1L,
-    end = -2L) %>% 
-    as.numeric()
+  detail <- stringr::str_remove_all(
+    stringr::str_split(
+      string, 
+      "\u00A3"
+      )[[1]][2],
+    "[:punct:]"
+    )
   
-  detail_last <- stringr::str_sub(
-    string = detail, 
-    start = -1L,
-    end = -1L)
-  
-  value_out <- detail_first * dplyr::case_when(
-    detail_last == "k" ~ 1000,
-    detail_last == "m" ~ 1000000,
-    TRUE ~ NA_real_
-  )
-  
-  return(value_out)
+  return(as.numeric(detail))
   
 }
