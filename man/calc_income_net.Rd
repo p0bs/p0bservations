@@ -10,7 +10,7 @@ calc_income_net(income_taxable)
 \item{income_taxable}{The taxable income level (i.e. after deductions for things like pension contributions).}
 }
 \description{
-This function applies the prevailing tax bands and rates to give a simple calculation for income after UK tax and National Insurance.
+This function applies the prevailing tax bands and rates to give a simple calculation for income after UK tax and National Insurance (to the nearest couple of pounds).
 }
 \examples{
 \dontrun{

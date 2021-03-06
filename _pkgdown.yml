@@ -7,3 +7,4 @@ reference:
     Functions for retrieving data in some way
 - contents: 
   - get_price_Zoopla
+  - calc_income_net
