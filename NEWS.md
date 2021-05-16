@@ -1,6 +1,7 @@
 # p0bservations 0.1.3
 
 -   Making `get_price_Zoopla` more robust by altering the scraping procedure, using a newer version of `rvest`
+-   Adding empty line to end of `_pkgdown.yml`
 
 # p0bservations 0.1.2
 
