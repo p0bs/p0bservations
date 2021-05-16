@@ -1,3 +1,7 @@
+# p0bservations 0.1.3
+
+-   Making `get_price_Zoopla` more robust by altering the scraping procedure, using a newer version of `rvest`
+
 # p0bservations 0.1.2
 
 -   Simplify `get_price_Zoopla` to reflect new Zoopla page layout. Remove Notes from CRAN check
