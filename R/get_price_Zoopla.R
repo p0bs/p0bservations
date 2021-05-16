@@ -28,18 +28,35 @@ get_price_Zoopla <- function(link_house){
     rlang::abort("link_house must begin with 'https://www.zoopla.co.uk/property/'")
   }
   
-  string <- xml2::read_html(link_house) %>% 
-    rvest::html_nodes("p.css-1tz04i5-Text-StyledEstimatedPriceText.eb1eagn1") %>%
-    rvest::html_text() 
+  # The paragraph for 'Estimated price' immediately precedes the estimated price itself
   
-  detail <- stringr::str_remove_all(
+  string <- rvest::read_html(link_house) %>% 
+    rvest::html_elements("p") %>% 
+    rvest::html_text2() %>% 
+    tibble::as_tibble() %>% 
+    tibble::rownames_to_column()
+  
+  location <- string %>% 
+    dplyr::filter(
+      stringr::str_detect(value, "Estimated price")
+      ) %>% 
+    dplyr::slice(1) %>% 
+    dplyr::pull(rowname) %>% 
+    as.integer()
+  
+  detail <- string %>% 
+    dplyr::slice(location + 1) %>% 
+    dplyr::pull(value) %>% 
     stringr::str_split(
-      string, 
-      "\u00A3"
-      )[[1]][2],
-    "[:punct:]"
-    )
+      string = ., 
+      pattern = "\u00A3", 
+      n = 2
+      ) %>% 
+    unlist() %>% 
+  .[2] %>% 
+    stringr::str_remove_all(string = ., pattern = "[:punct:]") %>% 
+    as.numeric()
   
-  return(as.numeric(detail))
+  return(detail)
   
 }
