@@ -13,6 +13,8 @@
 #'   link_house = 'https://www.zoopla.co.uk/property/10-waverleigh-road/cranleigh/gu6-8bz/9852441'
 #'   )
 #' }
+#' 
+#' @importFrom rlang .data
 
 get_price_Zoopla <- function(link_house){
   
@@ -30,31 +32,33 @@ get_price_Zoopla <- function(link_house){
   
   # The paragraph for 'Estimated price' immediately precedes the estimated price itself
   
-  string <- rvest::read_html(link_house) %>% 
-    rvest::html_elements("p") %>% 
-    rvest::html_text2() %>% 
-    tibble::as_tibble() %>% 
+  string <- rvest::read_html(link_house) |> 
+    rvest::html_elements("p") |> 
+    rvest::html_text2() |> 
+    tibble::as_tibble() |>  
     tibble::rownames_to_column()
   
-  location <- string %>% 
+  location <- string |> 
     dplyr::filter(
-      stringr::str_detect(value, "Estimated price")
-      ) %>% 
-    dplyr::slice(1) %>% 
-    dplyr::pull(rowname) %>% 
+      stringr::str_detect(
+        string = .data$value, 
+        pattern = "Estimated price")
+      ) |> 
+    dplyr::slice(1) |> 
+    dplyr::pull(.data$rowname) |>  
     as.integer()
   
-  detail <- string %>% 
-    dplyr::slice(location + 1) %>% 
-    dplyr::pull(value) %>% 
+  detail0 <- string |> 
+    dplyr::slice(location + 1) |> 
+    dplyr::pull(.data$value) |> 
     stringr::str_split(
-      string = ., 
       pattern = "\u00A3", 
       n = 2
-      ) %>% 
-    unlist() %>% 
-  .[2] %>% 
-    stringr::str_remove_all(string = ., pattern = "[:punct:]") %>% 
+      ) |> 
+    unlist()
+  
+  detail <- detail0[2] |> 
+    stringr::str_remove_all(pattern = "[:punct:]") |> 
     as.numeric()
   
   return(detail)
