@@ -21,5 +21,6 @@ get_price_Zoopla(
   link_house = 'https://www.zoopla.co.uk/property/10-waverleigh-road/cranleigh/gu6-8bz/9852441'
   )
 }
+
 }
 \keyword{Zoopla}
