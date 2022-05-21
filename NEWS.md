@@ -1,4 +1,4 @@
-# p0bservations (development version)
+# p0bservations 0.2.0
 
 -   Enabling tax calculations in different years for `calc_income_net`
 
