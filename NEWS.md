@@ -1,5 +1,7 @@
 # p0bservations (development version)
 
+-   Enabling tax calculations in different years for `calc_income_net`
+
 # p0bservations 0.1.3
 
 -   Making `get_price_Zoopla` more robust by altering the scraping procedure, using a newer version of `rvest`
@@ -11,7 +13,7 @@
 
 # p0bservations 0.1.1
 
--   Added \`calc_income_net\` to perform a simple tax & NI calculation for a UK resident.
+-   Added `calc_income_net` to perform a simple tax & NI calculation for a UK resident.
 
 # p0bservations 0.1.0
 
