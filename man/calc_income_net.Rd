@@ -4,17 +4,20 @@
 \alias{calc_income_net}
 \title{Calculate income net of UK tax and National Insurance}
 \usage{
-calc_income_net(income_taxable)
+calc_income_net(income_taxable, tax_year_end = 2021L)
 }
 \arguments{
 \item{income_taxable}{The taxable income level (i.e. after deductions for things like pension contributions).}
+
+\item{tax_year_end}{The calendar year in which the tax year ends, as a YYYY integer. For example, tax year 2020/21 would be 2021L (which is the default value).}
 }
 \description{
-This function applies the prevailing tax bands and rates to give a simple calculation for income after UK tax and National Insurance (to the nearest couple of pounds) for FY20/21.
+This function applies the prevailing tax bands and rates to give a simple calculation for income after UK tax and National Insurance (to the nearest couple of pounds) for FY20/21. Please note that these are approximations, so do not rely on them for financial returns or planning.
 }
 \examples{
 \dontrun{
-calc_income_net(income_taxable = 38000)
+calc_income_net(income_taxable = 38000, tax_year_end = 2022L)
 }
+
 }
 \keyword{Tax}
