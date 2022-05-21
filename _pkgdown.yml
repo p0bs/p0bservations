@@ -4,7 +4,12 @@ home:
 reference:
 - title: "Getting data"
   desc: >
-    Functions for retrieving data in some way
+    Functions for collecting data in some way
 - contents: 
   - get_price_Zoopla
+  - tax_parameters
+- title: "Financial calculations"
+  desc: >
+    Functions for calculating your finances
+- contents: 
   - calc_income_net
