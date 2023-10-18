@@ -1,4 +1,8 @@
-# p0bservations (development version)
+# p0bservations 0.2.1
+
+-   Updating tax calculations in `calc_income_net` for latest tax year
+-   Removing `get_price_Zoopla`
+-   Updating GitHub Actions to `v2`
 
 # p0bservations 0.2.0
 

@@ -1,7 +1,7 @@
 Package: p0bservations
 Type: Package
 Title: Assorted Functions and Observations by P0bs
-Version: 0.2.0.9000
+Version: 0.2.1
 Authors@R: 
   person(
     given = "Robin", 
