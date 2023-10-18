@@ -35,7 +35,8 @@ test_that("calculations work", {
   
   expect_equal(
     object = calc_income_net(
-      income_taxable = 8000
+      income_taxable = 8000,
+      tax_year_end = 2024L
       ), 
     expected = 8000, 
     tolerance = 0.0001
@@ -45,41 +46,46 @@ test_that("calculations work", {
   
   expect_equal(
     object = calc_income_net(
-      income_taxable = 22000
+      income_taxable = 22000, 
+      tax_year_end = 2024L
     ),
-    expected = 18601, 
+    expected = 18984.08, 
     tolerance = 0.0001
   )
   
   expect_equal(
     object = calc_income_net(
-      income_taxable = 40000
+      income_taxable = 40000, 
+      tax_year_end = 2024L
       ),
-    expected = 30842, 
+    expected = 31224.08, 
     tolerance = 0.0001
   )
   
   expect_equal(
     object = calc_income_net(
-      income_taxable = 65000
+      income_taxable = 65000, 
+      tax_year_end = 2024L
     ),
-    expected = 46340, 
+    expected = 46749.68, 
     tolerance = 0.0001
   )
   
   expect_equal(
     object = calc_income_net(
-      income_taxable = 105000
+      income_taxable = 105000, 
+      tax_year_end = 2024L
     ),
-    expected = 68540, 
+    expected = 68949.68, 
     tolerance = 0.0001
   )
   
   expect_equal(
     object = calc_income_net(
-      income_taxable = 160000
+      income_taxable = 160000, 
+      tax_year_end = 2024L
     ),
-    expected = 95940, 
+    expected = 95078, 
     tolerance = 0.0001
   )
   

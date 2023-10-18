@@ -4,7 +4,7 @@
 \alias{calc_income_net}
 \title{Calculate income net of UK tax and National Insurance}
 \usage{
-calc_income_net(income_taxable, tax_year_end = 2021L)
+calc_income_net(income_taxable, tax_year_end = 2024L)
 }
 \arguments{
 \item{income_taxable}{The taxable income level (i.e. after deductions for things like pension contributions).}
@@ -16,7 +16,7 @@ This function applies the prevailing tax bands and rates to give a simple calcul
 }
 \examples{
 \dontrun{
-calc_income_net(income_taxable = 38000, tax_year_end = 2022L)
+calc_income_net(income_taxable = 38000, tax_year_end = 2024L)
 }
 
 }
