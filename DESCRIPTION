@@ -19,10 +19,7 @@ Depends:
     R (>= 4.1)
 Imports: 
     dplyr,
-    rlang,
-    rvest,
-    stringr,
-    tibble
+    rlang
 Suggests: 
     covr,
     testthat (>= 3.0.0)

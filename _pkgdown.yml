@@ -2,14 +2,9 @@ home:
   title: An R package of various functions build by p0bs
   url: https://github.com/p0bs/p0bservations
 reference:
-- title: "Getting data"
-  desc: >
-    Functions for collecting data in some way
-- contents: 
-  - get_price_Zoopla
-  - tax_parameters
 - title: "Financial calculations"
   desc: >
     Functions for calculating your finances
 - contents: 
   - calc_income_net
+  - tax_parameters
