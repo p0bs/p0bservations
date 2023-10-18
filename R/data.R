@@ -1,6 +1,6 @@
 #' Key income tax parameters for the UK.
 #'
-#' A dataset containing the main tax parameters used for calculating net income for the UK.
+#' A dataset containing the main tax parameters used for calculating net income for the UK (outside of Scotland).
 #'
 #' @format A data frame with 3 rows (one for each tax year) and 14 variables:
 #' \describe{
