@@ -20,6 +20,21 @@
 
 probability_ruin <- function(return_expected, return_sd, life_remaining_expected, rate_spend){
   
+  # Error checks ----
+  
+  stop_not_scalar_double(return_expected)
+  stop_not_scalar_double(return_sd)
+  stop_not_scalar_double(life_remaining_expected)
+  stop_not_scalar_double(rate_spend)
+  
+  stop_not_positive(return_expected)
+  stop_not_positive(return_sd)
+  stop_not_positive(life_remaining_expected)
+  stop_not_positive(rate_spend)
+  
+  
+  # Main function ----
+  
   value_lambda <- log(2) / life_remaining_expected
   value_scale = ((return_sd * return_sd) + value_lambda) / 2
   value_shape = ((return_expected + (2 * value_lambda)) / value_scale) - 1
