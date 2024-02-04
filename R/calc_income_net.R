@@ -12,32 +12,21 @@
 #' 
 #' @importFrom rlang .data
 
-calc_income_net <- function(income_taxable, tax_year_end = 2024L){
+calc_income_net <- function(income_taxable, tax_year_end){
   
   # Error checks ----
-  if (!is.numeric(income_taxable)){ 
-    rlang::abort("income_taxable must be a numeric input") 
-  } 
-  
-  if (length(income_taxable) != 1){ 
-    rlang::abort("You must enter one, and only one, entry for income_taxable") 
-  } 
-  
-  if (income_taxable <= 0){
-    rlang::abort("income_taxable must be positive")
-  }
-  
-  if (!is.integer(tax_year_end)){ 
-    rlang::abort("tax_year_end must be an integer input") 
-  } 
+  stop_not_scalar_double(income_taxable)
+  stop_not_scalar_double(tax_year_end)
+  stop_not_positive(income_taxable)
   
   year_tax_end_options <- p0bservations::tax_parameters |> 
     dplyr::distinct(.data$year_tax_end) |> 
     dplyr::pull(.data$year_tax_end)
   
-  if (!(tax_year_end %in% year_tax_end_options)){ 
-    rlang::abort("tax_year_end is not in our dataset. Please choose another entry.") 
-  } 
+  if (!(tax_year_end %in% year_tax_end_options)){
+    rlang::abort("tax_year_end is not in our dataset. Please choose another entry.")
+  }
+  
   
   # Add tax limits, rates and breakpoints ----
   parameters_FY <- p0bservations::tax_parameters |> 
