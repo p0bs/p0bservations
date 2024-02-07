@@ -8,20 +8,17 @@
 #' @keywords Retirement
 #' @export
 #' @examples
-#' \dontrun{
 #' probability_ruin(
-#' return_expected = 0.035, 
-#' return_sd = 0.1, 
-#' life_remaining_expected = 30, 
-#' rate_spend = 0.03
-#' )
-#' }
+#'   return_expected = 0.07, 
+#'   return_sd = 0.2, 
+#'   life_remaining_expected = 28.1, 
+#'   rate_spend = 0.05
+#'   )
 #' 
 
 probability_ruin <- function(return_expected, return_sd, life_remaining_expected, rate_spend){
   
   # Error checks ----
-  
   stop_not_scalar_double(return_expected)
   stop_not_scalar_double(return_sd)
   stop_not_scalar_double(life_remaining_expected)
@@ -34,7 +31,6 @@ probability_ruin <- function(return_expected, return_sd, life_remaining_expected
   
   
   # Main function ----
-  
   value_lambda <- log(2) / life_remaining_expected
   value_scale = ((return_sd * return_sd) + value_lambda) / 2
   value_shape = ((return_expected + (2 * value_lambda)) / value_scale) - 1

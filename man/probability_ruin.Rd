@@ -24,14 +24,12 @@ probability_ruin(
 This function uses the Milevsky-Robinson to analyse the probability of retirement ruin, by parsimoniously meshing investment risk and return, mortality estimates and spending rates without resorting to opaque Monte Carlo simulations. For further details, see: Milevsky, M. and C. Robinson; "A Sustainable Spending Rate without Simulation"; Financial Analysts Journal, Volume 61, Number 6. (2005)
 }
 \examples{
-\dontrun{
 probability_ruin(
-return_expected = 0.035, 
-return_sd = 0.1, 
-life_remaining_expected = 30, 
-rate_spend = 0.03
-)
-}
+  return_expected = 0.07, 
+  return_sd = 0.2, 
+  life_remaining_expected = 28.1, 
+  rate_spend = 0.05
+  )
 
 }
 \keyword{Retirement}
