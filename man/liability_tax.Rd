@@ -15,9 +15,10 @@ liability_tax(income_taxable, tax_year_end)
 This function applies the prevailing tax bands and rates to give a simple calculation for UK income tax and National Insurance (to the nearest couple of pounds). Please note that these are approximations, so do not rely on them for financial returns or planning.
 }
 \examples{
-\dontrun{
-calc_income_net(income_taxable = 38000, tax_year_end = 2024)
-}
+liability_tax(
+  income_taxable = 38000, 
+  tax_year_end = 2024
+  )$total_tax
 
 }
 \keyword{Tax}

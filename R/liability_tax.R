@@ -6,9 +6,10 @@
 #' @keywords Tax
 #' @export
 #' @examples
-#' \dontrun{
-#' calc_income_net(income_taxable = 38000, tax_year_end = 2024)
-#' }
+#' liability_tax(
+#'   income_taxable = 38000, 
+#'   tax_year_end = 2024
+#'   )$total_tax
 #' 
 #' @importFrom rlang .data
 
@@ -107,15 +108,10 @@ liability_tax <- function(income_taxable, tax_year_end){
   output_ni <- tax_calculations |> 
     dplyr::pull(.data$ni)
   
-  output_ni_lower <- tax_calculations |> 
-    dplyr::pull(.data$taxable_ni_lower)
-  
-  output_ni_higher <- tax_calculations |> 
-    dplyr::pull(.data$taxable_ni_higher)
-  
   output_taxes_total <- tax_calculations |> 
     dplyr::pull(.data$taxes_total)
   
-  # return(list(output_income_net, output_tax, output_ni, output_ni_lower, output_ni_higher))
-  return(output_taxes_total)
+  output_values <- list("income_net" = output_income_net, "income_tax" = output_tax, "ni" = output_ni, "total_tax" = output_taxes_total)
+  
+  return(output_values)
 }
