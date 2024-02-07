@@ -1,6 +1,6 @@
 #' @title Calculate the probability of retirement ruin
 #'
-#' @description This function uses the Milevsky-Robinson to analyse the probability of retirement ruin, by parsimoniously meshing investment risk and return, mortality estimates and spending rates without resorting to opaque Monte Carlo simulations. For further details, see: Milevsky, M. and C. Robinson; "A Sustainable Spending Rate without Simulation"; Financial Analysts Journal, Volume 61, Number 6. (2005)
+#' @description This function uses the Milevsky-Robinson to analyse the probability of retirement ruin, by parsimoniously meshing investment risk and return, mortality estimates and spending rates without resorting to opaque Monte Carlo simulations. For further details, see: Milevsky, M. and C. Robinson; "A Sustainable Spending Rate without Simulation"; Financial Analysts Journal, Volume 61, Number 6. (2005). Please note that these are approximations, so do not rely on them for financial returns or planning.
 #' @param return_expected The expected real return of the entire pension portfolio
 #' @param return_sd The projected standard deviation of the returns of the entire pension portfolio
 #' @param life_remaining_expected The median projected remaining lifespan of the individual in question

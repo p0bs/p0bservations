@@ -21,7 +21,7 @@ probability_ruin(
 \item{rate_spend}{The annual spending rate applied by the individual to their pension portfolio}
 }
 \description{
-This function uses the Milevsky-Robinson to analyse the probability of retirement ruin, by parsimoniously meshing investment risk and return, mortality estimates and spending rates without resorting to opaque Monte Carlo simulations. For further details, see: Milevsky, M. and C. Robinson; "A Sustainable Spending Rate without Simulation"; Financial Analysts Journal, Volume 61, Number 6. (2005)
+This function uses the Milevsky-Robinson to analyse the probability of retirement ruin, by parsimoniously meshing investment risk and return, mortality estimates and spending rates without resorting to opaque Monte Carlo simulations. For further details, see: Milevsky, M. and C. Robinson; "A Sustainable Spending Rate without Simulation"; Financial Analysts Journal, Volume 61, Number 6. (2005). Please note that these are approximations, so do not rely on them for financial returns or planning.
 }
 \examples{
 probability_ruin(
