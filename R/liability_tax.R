@@ -1,6 +1,6 @@
 #' @title Calculate UK income and/or National Insurance taxes
 #'
-#' @description This function applies the prevailing tax bands and rates to give a simple calculation for UK income tax and National Insurance (to the nearest couple of pounds). Please note that these are approximations, so do not rely on them for financial returns or planning.
+#' @description This function applies the prevailing tax bands and rates to give a simple calculation for UK Income Tax and National Insurance (to the nearest couple of pounds). Please note that these are approximations, so do not rely on them for financial returns or planning. The output is a list, containing the following measures: `income_net` for the net income (after Income Tax and National Insurance); `income_tax` for the Income Tax liability; `ni` for the National Insurance liability; and `total_tax` for the combined Income Tax and National Insurance liability.
 #' @param income_taxable The taxable income level (i.e. after deductions for things like pension contributions).
 #' @param tax_year_end The calendar year in which the tax year ends, as a YYYY integer. For example, tax year 2023/24 would be 2024.
 #' @keywords Tax
