@@ -1,3 +1,7 @@
+# p0bservations 0.3.1
+
+-   Tweaking `rate_annuity` error checks
+
 # p0bservations 0.3.0
 
 -   Updating tax calculations to contain better error checks and generate many different outputs
