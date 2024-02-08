@@ -23,6 +23,19 @@
 
 rate_annuity <- function(value_age, value_specifications){
   
+  # Error check ----
+  values_age <- c("55", "60", "65", "70", "75")
+  values_specifications <- c("single_simple", "single_guaranteed", "single_escalating", "half_simple", "full_simple", "half_escalating")
+  
+  if (!rlang::arg_match(arg = value_age, values = values_age, multiple = FALSE)){ 
+    rlang::abort("You must enter one (and only one) age (as a character) from the list of possible values") 
+  }
+  
+  if (!rlang::arg_match(arg = value_specifications, values = values_specifications, multiple = FALSE)){ 
+    rlang::abort("You must enter one (and only one) specification (as a character) from the list of possible values") 
+  }
+  
+  # Main code ----
   link_annuities <- "https://www.sharingpensions.co.uk/annuity_rates.htm"
   
   table_annuities_raw <- rvest::read_html(link_annuities) |> 
@@ -30,7 +43,6 @@ rate_annuity <- function(value_age, value_specifications){
     _[30] |> 
     rvest::html_table()
   
-  # value_percentageJoint_yearsGuaranteed_escalationRate is the syntax
   table_annuities_single <- table_annuities_raw[[1]] |> 
     dplyr::slice(5:9) |> 
     dplyr::select("age" = .data$X1, "single_simple" = .data$X2, "single_guaranteed" = .data$X4, "single_escalating" = .data$X6) |> 
