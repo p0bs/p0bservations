@@ -19,13 +19,25 @@
     <loc>/news/index.html</loc>
   </url>
   <url>
-    <loc>/reference/calc_income_net.html</loc>
-  </url>
-  <url>
     <loc>/reference/index.html</loc>
   </url>
   <url>
+    <loc>/reference/liability_tax.html</loc>
+  </url>
+  <url>
     <loc>/reference/p0bservations-package.html</loc>
+  </url>
+  <url>
+    <loc>/reference/probability_ruin.html</loc>
+  </url>
+  <url>
+    <loc>/reference/rate_annuity.html</loc>
+  </url>
+  <url>
+    <loc>/reference/stop_not_positive.html</loc>
+  </url>
+  <url>
+    <loc>/reference/stop_not_scalar_double.html</loc>
   </url>
   <url>
     <loc>/reference/tax_parameters.html</loc>
