@@ -4,7 +4,7 @@
 \alias{calc_income_net}
 \title{Calculate income net of UK tax and National Insurance}
 \usage{
-calc_income_net(income_taxable, tax_year_end = 2024L)
+calc_income_net(income_taxable, tax_year_end)
 }
 \arguments{
 \item{income_taxable}{The taxable income level (i.e. after deductions for things like pension contributions).}

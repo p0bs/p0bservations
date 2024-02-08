@@ -1,18 +1,19 @@
-#' @title Calculate income net of UK tax and National Insurance
+#' @title Calculate UK income and/or National Insurance taxes
 #'
-#' @description This function applies the prevailing tax bands and rates to give a simple calculation for income after UK tax and National Insurance (to the nearest couple of pounds) for FY20/21. Please note that these are approximations, so do not rely on them for financial returns or planning.
+#' @description This function applies the prevailing tax bands and rates to give a simple calculation for UK Income Tax and National Insurance (to the nearest couple of pounds). Please note that these are approximations, so do not rely on them for financial returns or planning. The output is a list, containing the following measures: `income_net` for the net income (after Income Tax and National Insurance); `income_tax` for the Income Tax liability; `ni` for the National Insurance liability; and `total_tax` for the combined Income Tax and National Insurance liability.
 #' @param income_taxable The taxable income level (i.e. after deductions for things like pension contributions).
-#' @param tax_year_end The calendar year in which the tax year ends, as a YYYY integer. For example, tax year 2020/21 would be 2021L (which is the default value).
+#' @param tax_year_end The calendar year in which the tax year ends, as a YYYY integer. For example, tax year 2023/24 would be 2024.
 #' @keywords Tax
 #' @export
 #' @examples
-#' \dontrun{
-#' calc_income_net(income_taxable = 38000, tax_year_end = 2024L)
-#' }
+#' liability_tax(
+#'   income_taxable = 38000, 
+#'   tax_year_end = 2024
+#'   )$total_tax
 #' 
 #' @importFrom rlang .data
 
-calc_income_net <- function(income_taxable, tax_year_end){
+liability_tax <- function(income_taxable, tax_year_end){
   
   # Error checks ----
   stop_not_scalar_double(income_taxable)
@@ -93,7 +94,8 @@ calc_income_net <- function(income_taxable, tax_year_end){
         (.data$rate_tax_upper * .data$taxable_additional),
       ni = (.data$rate_ni_lower * .data$taxable_ni_lower) + 
         (.data$rate_ni_upper * .data$taxable_ni_higher),
-      income_net = income_taxable - .data$tax - .data$ni
+      income_net = income_taxable - .data$tax - .data$ni,
+      taxes_total = .data$tax + .data$ni
       )
   
   # Output ----
@@ -106,12 +108,10 @@ calc_income_net <- function(income_taxable, tax_year_end){
   output_ni <- tax_calculations |> 
     dplyr::pull(.data$ni)
   
-  output_ni_lower <- tax_calculations |> 
-    dplyr::pull(.data$taxable_ni_lower)
+  output_taxes_total <- tax_calculations |> 
+    dplyr::pull(.data$taxes_total)
   
-  output_ni_higher <- tax_calculations |> 
-    dplyr::pull(.data$taxable_ni_higher)
+  output_values <- list("income_net" = output_income_net, "income_tax" = output_tax, "ni" = output_ni, "total_tax" = output_taxes_total)
   
-  # return(list(output_income_net, output_tax, output_ni, output_ni_lower, output_ni_higher))
-  return(output_income_net)
+  return(output_values)
 }
