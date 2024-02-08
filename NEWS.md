@@ -1,3 +1,9 @@
+# p0bservations 0.3.0
+
+-   Updating tax calculations to contain better error checks and generate many different outputs
+-   Adding `probability_ruin` calculation
+-   Adding `rate_annuity` to pull UK annuity rates from the internet
+
 # p0bservations 0.2.1
 
 -   Updating tax calculations in `calc_income_net` for latest tax year
