@@ -4,7 +4,16 @@ home:
 reference:
 - title: "Financial calculations"
   desc: >
-    Functions for calculating your finances
+    Functions and data for financial calculations
 - contents: 
-  - calc_income_net
   - tax_parameters
+  - liability_tax
+  - probability_ruin
+  - rate_annuity
+
+- title: "Error checking"
+  desc: >
+    Functions to check other functions
+  contents:
+  - stop_not_positive
+  - stop_not_scalar_double
