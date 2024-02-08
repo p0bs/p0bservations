@@ -8,6 +8,6 @@
 
 Assorted functions and observations from p0bs, including:
 
--   Estimate Income Tax & National Insurance liabilities for a UK resident
--   Calculating the probability that a retirement spend rate is sustainable
--   Getting the latest annuity rates for the UK
+-   `liability_tax`: Estimating Income Tax & National Insurance liabilities for a UK resident
+-   `probability_ruin`: Calculating the probability that a retirement spend rate is sustainable
+-   `rate_annuity`: Getting the latest annuity rates for the UK

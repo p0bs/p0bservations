@@ -27,13 +27,17 @@ rate_annuity <- function(value_age, value_specifications){
   values_age <- c("55", "60", "65", "70", "75")
   values_specifications <- c("single_simple", "single_guaranteed", "single_escalating", "half_simple", "full_simple", "half_escalating")
   
-  if (!rlang::arg_match(arg = value_age, values = values_age, multiple = FALSE)){ 
-    rlang::abort("You must enter one (and only one) age (as a character) from the list of possible values") 
-  }
+  selection_age <- rlang::arg_match(
+    arg = value_age, 
+    values = values_age, 
+    multiple = FALSE
+    )
   
-  if (!rlang::arg_match(arg = value_specifications, values = values_specifications, multiple = FALSE)){ 
-    rlang::abort("You must enter one (and only one) specification (as a character) from the list of possible values") 
-  }
+  selection_specifications <- rlang::arg_match(
+    arg = value_specifications, 
+    values = values_specifications, 
+    multiple = FALSE
+    )
   
   # Main code ----
   link_annuities <- "https://www.sharingpensions.co.uk/annuity_rates.htm"
@@ -69,8 +73,8 @@ rate_annuity <- function(value_age, value_specifications){
   
   value_output <- table_annuities |>
     dplyr::filter(
-      .data$age == value_age,
-      .data$specifications == value_specifications
+      .data$age == selection_age,
+      .data$specifications == selection_specifications
     ) |>
     dplyr::pull(.data$rate)
  
