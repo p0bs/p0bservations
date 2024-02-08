@@ -8,4 +8,6 @@
 
 Assorted functions and observations from p0bs, including:
 
--   Performing a simple income tax & national insurance calculation for a UK resident
+-   Estimate Income Tax & National Insurance liabilities for a UK resident
+-   Calculating the probability that a retirement spend rate is sustainable
+-   Getting the latest annuity rates for the UK
