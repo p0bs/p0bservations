@@ -1,3 +1,5 @@
+# p0bservations 0.3.2
+
 # p0bservations 0.3.1
 
 -   Tweaking `rate_annuity` error checks
