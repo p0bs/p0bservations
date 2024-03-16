@@ -1,5 +1,7 @@
 # p0bservations 0.3.2
 
+-   Add `probability_ruin_rate` to iterate over `probability_ruin` so as to find the spend rate that generates the desired probability of retirement ruin
+
 # p0bservations 0.3.1
 
 -   Tweaking `rate_annuity` error checks
