@@ -2,6 +2,7 @@
 
 export(liability_tax)
 export(probability_ruin)
+export(probability_ruin_rate)
 export(rate_annuity)
 importFrom(rlang,.data)
 importFrom(stats,pgamma)

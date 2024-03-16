@@ -9,6 +9,7 @@ reference:
   - tax_parameters
   - liability_tax
   - probability_ruin
+  - probability_ruin_rate
   - rate_annuity
 
 - title: "Error checking"
