@@ -1,5 +1,7 @@
 # p0bservations 0.3.3
 
+-   Add GitHub Action for wasm-related needs
+
 # p0bservations 0.3.2
 
 -   Add `probability_ruin_rate` to iterate over `probability_ruin` so as to find the spend rate that generates the desired probability of retirement ruin
