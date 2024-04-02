@@ -1,6 +1,10 @@
 home:
   title: An R package of various functions build by p0bs
   url: https://github.com/p0bs/p0bservations
+
+template:
+  bootstrap: 5
+
 reference:
 - title: "Financial calculations"
   desc: >
