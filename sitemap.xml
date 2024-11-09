@@ -1,48 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>/404.html</loc>
-  </url>
-  <url>
-    <loc>/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>/authors.html</loc>
-  </url>
-  <url>
-    <loc>/index.html</loc>
-  </url>
-  <url>
-    <loc>/news/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/liability_tax.html</loc>
-  </url>
-  <url>
-    <loc>/reference/p0bservations-package.html</loc>
-  </url>
-  <url>
-    <loc>/reference/probability_ruin.html</loc>
-  </url>
-  <url>
-    <loc>/reference/probability_ruin_rate.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rate_annuity.html</loc>
-  </url>
-  <url>
-    <loc>/reference/stop_not_positive.html</loc>
-  </url>
-  <url>
-    <loc>/reference/stop_not_scalar_double.html</loc>
-  </url>
-  <url>
-    <loc>/reference/tax_parameters.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>/404.html</loc></url>
+<url><loc>/LICENSE.html</loc></url>
+<url><loc>/authors.html</loc></url>
+<url><loc>/index.html</loc></url>
+<url><loc>/news/index.html</loc></url>
+<url><loc>/reference/index.html</loc></url>
+<url><loc>/reference/liability_tax.html</loc></url>
+<url><loc>/reference/p0bservations-package.html</loc></url>
+<url><loc>/reference/probability_ruin.html</loc></url>
+<url><loc>/reference/probability_ruin_rate.html</loc></url>
+<url><loc>/reference/rate_annuity.html</loc></url>
+<url><loc>/reference/stop_not_positive.html</loc></url>
+<url><loc>/reference/stop_not_scalar_double.html</loc></url>
+<url><loc>/reference/tax_parameters.html</loc></url>
 </urlset>
+
