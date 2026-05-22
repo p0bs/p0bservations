@@ -7,3 +7,5 @@
 #' @importFrom stats pgamma
 ## usethis namespace: end
 NULL
+
+utils::globalVariables("tax_parameters")

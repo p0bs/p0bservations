@@ -19,5 +19,10 @@ Useful links:
 \author{
 \strong{Maintainer}: Robin Penfold \email{robinpenfold@icloud.com}
 
+Authors:
+\itemize{
+  \item Robin Penfold \email{robinpenfold@icloud.com}
+}
+
 }
 \keyword{internal}

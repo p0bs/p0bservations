@@ -1,0 +1,19 @@
+{
+  "sandbox": {
+    "enabled": true
+  },
+  "permission": {
+    "skill": {
+      "r-package-development": "allow"
+    },
+    "edit": {
+      "*.md": "allow",
+      "*.R": "allow",
+      "*/DESCRIPTION": "allow",
+      "*/NAMESPACE": "allow"
+    },
+    "executeCode": {
+      "*": "allow"
+    }
+  }
+}

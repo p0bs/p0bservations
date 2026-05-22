@@ -10,24 +10,35 @@
 rate_annuity(value_age, value_specifications)
 }
 \arguments{
-\item{value_age}{These are the choices for the age of the annuitant, namely: `55`, `60`, `65`, `70` or `75`. The ensuing annuity rates imply that the annuity begins to be paid immediately and thereafter on a monthly basis.}
+\item{value_age}{These are the choices for the age of the annuitant, namely:
+`55`, `60`, `65`, `70` or `75`. The ensuing annuity rates imply that the
+annuity begins to be paid immediately and thereafter on a monthly basis.}
 
-\item{value_specifications}{These are the specifications available, varying by: whether the annuity is on a single basis or a joint basis (and, if so, whether the last remaining spouse receives half or all of the annuity); whether the annuity is guaranteed for ten years or not; and whether the payments will escalate at 3% pa or not. In all, the following combinations are available: 
+\item{value_specifications}{These are the specifications available, varying
+  by: whether the annuity is on a single basis or a joint basis (and, if so,
+  whether the last remaining spouse receives half or all of the annuity);
+  whether the annuity is guaranteed for ten years or not; and whether the
+  payments will escalate at 3% pa or not. In all, the following combinations
+  are available:
 \describe{
   \item{single_simple}{single, level rate, no guarantee}
   \item{single_guaranteed}{single, level rate, guaranteed}
   \item{single_escalating}{single, escalating rate, no guarantee}
   \item{half_simple}{joint, half upon first death, level rate, no guarantee}
   \item{full_simple}{joint, all upon first death, level rate, no guarantee}
-  \item{half_escalating}{joint, half upon first death, escalating rate, no guarantee}
+  \item{half_escalating}{joint, half upon first death, escalating rate, no
+    guarantee}
 }}
 }
 \description{
-This function retrieves data on UK annuity rates from Sharing Pensions. Rates are available for different specifications and ages. See the website for further details. Please note that these are approximations, so do not rely on them for financial returns or planning.
+This function retrieves data on UK annuity rates from Sharing
+Pensions. Rates are available for different specifications and ages. See the
+website for further details. Please note that these are approximations, so
+do not rely on them for financial returns or planning.
 }
 \examples{
 \dontrun{
-rate_annuity(value_age, value_specifications)
+rate_annuity(value_age = "65", value_specifications = "single_simple")
 }
 
 }
