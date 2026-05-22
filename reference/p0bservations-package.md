@@ -13,3 +13,7 @@ Useful links:
 ## Author
 
 **Maintainer**: Robin Penfold <robinpenfold@icloud.com>
+
+Authors:
+
+- Robin Penfold <robinpenfold@icloud.com>

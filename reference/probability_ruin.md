@@ -1,13 +1,14 @@
 # Calculate the probability of retirement ruin
 
-This function uses the Milevsky-Robinson to analyse the probability of
-retirement ruin, by parsimoniously meshing investment risk and return,
-mortality estimates and spending rates without resorting to opaque Monte
-Carlo simulations. For further details, see: Milevsky, M. and C.
-Robinson; "A Sustainable Spending Rate without Simulation"; Financial
-Analysts Journal, Volume 61, Number 6. (2005). Please note that these
-are approximations, so do not rely on them for financial returns or
-planning.
+This function uses the Milevsky-Robinson method to analyse the
+probability of retirement ruin, by parsimoniously meshing investment
+risk and return, mortality estimates and spending rates without
+resorting to opaque Monte Carlo simulations. For further details, see:
+Milevsky, M. and C. Robinson; "A Sustainable Spending Rate without
+Simulation"; Financial Analysts Journal, Volume 61, Number 6. (2005).
+Please note that these are approximations, so do not rely on them for
+financial returns or planning. All arguments are vectorised and are
+recycled in the standard R fashion.
 
 ## Usage
 
@@ -24,30 +25,39 @@ probability_ruin(
 
 - return_expected:
 
-  The expected real return of the entire pension portfolio
+  The expected real return of the entire pension portfolio.
 
 - return_sd:
 
   The projected standard deviation of the returns of the entire pension
-  portfolio
+  portfolio.
 
 - life_remaining_expected:
 
-  The median projected remaining lifespan of the individual in question
+  The median projected remaining lifespan of the individual in question.
 
 - rate_spend:
 
   The annual spending rate applied by the individual to their pension
-  portfolio
+  portfolio.
 
 ## Examples
 
 ``` r
 probability_ruin(
-  return_expected = 0.07, 
-  return_sd = 0.2, 
-  life_remaining_expected = 28.1, 
+  return_expected = 0.07,
+  return_sd = 0.2,
+  life_remaining_expected = 28.1,
   rate_spend = 0.05
-  )
+)
 #> [1] 0.267855
+
+# Vectorised: sweep over spending rates
+probability_ruin(
+  return_expected = 0.07,
+  return_sd = 0.2,
+  life_remaining_expected = 28.1,
+  rate_spend = c(0.03, 0.04, 0.05)
+)
+#> [1] 0.1026701 0.1804438 0.2678550
 ```

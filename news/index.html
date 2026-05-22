@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">p0bservations</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.3.3</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.4.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,6 +32,17 @@
       <small>Source: <a href="https://github.com/p0bs/p0bservations/blob/main/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="0.4.0" id="p0bservations-040">p0bservations 0.4.0<a class="anchor" aria-label="anchor" href="#p0bservations-040"></a></h2>
+<ul><li>
+<code><a href="../reference/liability_tax.html">liability_tax()</a></code> now accepts a numeric vector for <code>income_taxable</code>; all output list elements are vectors of the same length. The <code>rowwise()</code> implementation has been replaced with vectorised <code><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">pmin()</a></code>/<code><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">pmax()</a></code> operations.</li>
+<li>
+<code><a href="../reference/probability_ruin.html">probability_ruin()</a></code> now accepts numeric vectors for all parameters, which are recycled in the standard R fashion.</li>
+<li>
+<code><a href="../reference/probability_ruin_rate.html">probability_ruin_rate()</a></code> now uses <code><a href="https://rdrr.io/r/stats/GammaDist.html" class="external-link">stats::qgamma()</a></code> — the exact analytical inverse of the gamma CDF — replacing a numerical binary search. The function now accepts numeric vectors for all parameters. The previous implementation was bounded to spend rates below 5%; this restriction is removed.</li>
+<li>Input validation across all functions now uses classed conditions (e.g. <code>"p0bservations_error_not_numeric"</code>) so callers can catch specific error types. The <code>tax_year_end</code> argument in <code><a href="../reference/liability_tax.html">liability_tax()</a></code> now correctly accepts integer literals (e.g. <code>2024L</code>).</li>
+<li>The <code>readr</code> package dependency has been removed.</li>
+</ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.3.3" id="p0bservations-033">p0bservations 0.3.3<a class="anchor" aria-label="anchor" href="#p0bservations-033"></a></h2>
 <ul><li>Add GitHub Action for wasm-related needs</li>

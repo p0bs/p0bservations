@@ -30,7 +30,7 @@ rate_annuity(value_age, value_specifications)
   annuity is on a single basis or a joint basis (and, if so, whether the
   last remaining spouse receives half or all of the annuity); whether
   the annuity is guaranteed for ten years or not; and whether the
-  payments will escalate at 3
+  payments will escalate at 3 are available:
 
   single_simple
 
@@ -60,6 +60,6 @@ rate_annuity(value_age, value_specifications)
 
 ``` r
 if (FALSE) { # \dontrun{
-rate_annuity(value_age, value_specifications)
+rate_annuity(value_age = "65", value_specifications = "single_simple")
 } # }
 ```

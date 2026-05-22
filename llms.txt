@@ -25,12 +25,3 @@ Functions and data for financial calculations
 - [`rate_annuity()`](rate_annuity.md) : Get the latest annuity rates for
   the UK
 
-## Error checking
-
-Functions to check other functions
-
-- [`stop_not_positive()`](stop_not_positive.md) : Stop the function the
-  value entered is (or is below) zero
-- [`stop_not_scalar_double()`](stop_not_scalar_double.md) : Stop the
-  function if zero or more than one value is entered
-
