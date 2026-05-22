@@ -7,7 +7,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/p0bs/p0bservations/blob/main/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/p0bs/p0bservations/blob/v0.4.0/DESCRIPTION)
 
 Penfold R (2026). *p0bservations: Assorted Functions and Observations by
 P0bs*. R package version 0.4.0, <https://github.com/p0bs/p0bservations>.
