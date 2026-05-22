@@ -1,3 +1,11 @@
+# p0bservations 0.4.0
+
+-   `liability_tax()` now accepts a numeric vector for `income_taxable`; all output list elements are vectors of the same length. The `rowwise()` implementation has been replaced with vectorised `pmin()`/`pmax()` operations.
+-   `probability_ruin()` now accepts numeric vectors for all parameters, which are recycled in the standard R fashion.
+-   `probability_ruin_rate()` now uses `stats::qgamma()` — the exact analytical inverse of the gamma CDF — replacing a numerical binary search. The function now accepts numeric vectors for all parameters. The previous implementation was bounded to spend rates below 5%; this restriction is removed.
+-   Input validation across all functions now uses classed conditions (e.g. `"p0bservations_error_not_numeric"`) so callers can catch specific error types. The `tax_year_end` argument in `liability_tax()` now correctly accepts integer literals (e.g. `2024L`).
+-   The `readr` package dependency has been removed.
+
 # p0bservations 0.3.3
 
 -   Add GitHub Action for wasm-related needs
